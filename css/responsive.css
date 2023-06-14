@@ -1,291 +1,207 @@
-/*--------------------------------------------------------------------- 
-File Name: responsive.css 
----------------------------------------------------------------------*/
-
-@media (min-width: 1343px) and (max-width: 1500px) {
-    .full_bg {
-        height: 100%;
-    }
-    #banner1 .carousel-control-next {
-        right: 43.7%;
-    }
-    #myCarousel .carousel-control-next {
-        right: 43.7%;
-    }
+@media only screen and (min-width: 992px) and (max-width: 1280px) { 
+div.cart-collaterals ul.products li.product {
+  float: left;
+  margin-left: 30px;
+  position: relative;
+  width: 160px;
+}
+.coupon input[type="text"] {
+  width: 100px;
+}  
+input[type="submit"], button[type="submit"], [type="button"]{
+  padding: 11px 15px;
+} 
+.col-1, .col-2 {
+  width: 293px;
+}    
+    
+    
 }
 
-@media (min-width: 1200px) and (max-width: 1342px) {
-    .full_bg {
-        height: 100%;
-    }
-    #banner1 .carousel-control-next {
-        right: 42.1%;
-    }
-    #myCarousel .carousel-control-next {
-        right: 42.1%;
-    }
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+.user-menu, .header-right ul.list-inline {
+  text-align: center;
 }
-
-@media (min-width: 992px) and (max-width: 1199px) {
-    .full_bg {
-        height: 100%;
-    }
-    .site-navbar ul li {
-        padding-right: 57px;
-    }
-    .mar_right {
-        margin-right: 0;
-    }
-    .creative .read_more {
-        max-width: 185px;
-        margin-right: 0;
-    }
-    #banner1 .carousel-control-next {
-        right: 39.1%;
-    }
-    #myCarousel .carousel-control-next {
-        right: 39.1%;
-    }
+.mainmenu-area ul.navbar-nav li a {
+  font-size: 14px;
+  padding: 15px 10px;
+}  
+.single-promo {margin-bottom: 30px}    
+.single-product-widget, .footer-about-us, .footer-menu {
+  margin-bottom: 60px;
 }
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .full_bg {
-        height: 100%;
-    }
-    .site-navbar ul li {
-        padding-right: 31px;
-    }
-    .mar_right {
-        margin-right: 0;
-    }
-    .creative h1 {
-        font-size: 56px;
-        line-height: 70px;
-    }
-    .creative p {
-        padding: 5px 0 15px 0;
-    }
-    .creative .read_more {
-        max-width: 142px;
-        margin-right: 0;
-    }
-    #banner1 .carousel-control-next {
-        right: 39.1%;
-    }
-    #banner1 .carousel-control-prev {
-        left: 40.7%;
-    }
-    #myCarousel .carousel-control-next {
-        right: 39.1%;
-    }
-    #myCarousel .carousel-control-prev {
-        left: 40.7%;
-    }
-    .titlepage h2 {
-        font-size: 37px;
-        line-height: 45px;
-    }
+    
+    
+.product-widget-area .zigzag-bottom {
+  bottom: -50px;
+  height: 100px;
 }
-
-@media (min-width: 576px) and (max-width: 767px) {
-    .full_bg {
-        height: 100%;
-    }
-    .grid {
-        display: grid;
-    }
-    .order {
-        order: -1;
-    }
-    .mar_right {
-        margin-right: 0px;
-    }
-    .about_img,
-    .agency {
-        margin-top: 30px;
-    }
-    #banner1 .carousel-control-prev,
-    #banner1 .carousel-control-next {
-        top: 103%;
-    }
-    #banner1 .carousel-control-next {
-        right: 36.7%;
-    }
-    #banner1 .carousel-control-prev {
-        left: 36.7%;
-    }
-    #myCarousel .carousel-control-prev,
-    #myCarousel .carousel-control-next {
-        top: 108%;
-    }
-    #myCarousel .carousel-control-next {
-        right: 36.7%;
-    }
-    #myCarousel .carousel-control-prev {
-        left: 36.7%;
-    }
-    .titlepage h2 {
-        font-size: 37px;
-        line-height: 45px;
-    }
-    .pro_file span {
-        padding-bottom: 30px;
-    }
-    .d_none {
-        display: none !important;
-    }
-    .agency {
-        margin-top: 30px;
-    }
-    .latest {
-        max-width: 377px;
-        margin: 0 auto;
-        margin-bottom: 55px;
-    }
-    /* navbar css for mobile start */
-    .nav-toggler {
-        display: block;
-        position: absolute;
-        right: 15px;
-        z-index: 99999;
-    }
-    .site-navbar {
-        min-height: 60px;
-    }
-    .site-navbar ul {
-        position: absolute;
-        width: 100%;
-        left: -15px;
-        top: 60px;
-        flex-direction: column;
-        align-items: center;
-        background-color: #fff;
-        max-height: 0;
-        overflow: hidden;
-        transition: .3s;
-        z-index: 99999;
-        box-shadow: 0 0 10px rgb(192, 190, 182);
-    }
-    .site-navbar ul li {
-        width: 100%;
-        text-align: left;
-        padding-right: 0;
-    }
-    .site-navbar ul li a {
-        padding: 25px 25px 0px 25px;
-    }
-    .site-navbar ul.open {
-        max-height: 100vh;
-        padding-bottom: 25px;
-        overflow: visible;
-    }
-    /* navbar css for mobile end */
+.product-widget-area {
+  padding-bottom: 90px;
+}   
+    
+.footer-top-area .zigzag-bottom {
+  bottom: -153px;
+  height: 200px;
+}    
+.footer-top-area {
+  padding: 35px 0 125px;
+}  
+div.cart-collaterals ul.products li.product {
+  width: 190px;
+}  
+    
+.col-1, .col-2 {
+  width: 345px;
+}    
+    
 }
-
-@media (max-width: 575px) {
-    .full_bg {
-        height: 100%;
-    }
-    .slider_main {
-        padding: 50px 0 80px 0;
-    }
-    .logo {
-        text-align: left;
-    }
-    .about_img,
-    .agency {
-        margin-top: 30px;
-    }
-    .creative .read_more {
-        margin-bottom: 5px;
-        margin-right: 0;
-    }
-    .mar_right {
-        margin-right: 0px;
-    }
-    #banner1 .carousel-control-prev,
-    #banner1 .carousel-control-next {
-        top: 103%;
-    }
-    #banner1 .carousel-control-next {
-        right: 25.7%;
-    }
-    #banner1 .carousel-control-prev {
-        left: 25.7%;
-    }
-    #myCarousel .carousel-control-prev,
-    #myCarousel .carousel-control-next {
-        top: 108%;
-    }
-    #myCarousel .carousel-control-next {
-        right: 25.7%;
-    }
-    #myCarousel .carousel-control-prev {
-        left: 25.7%;
-    }
-    .titlepage h2 {
-        font-size: 37px;
-        line-height: 45px;
-    }
-    .pro_file span {
-        padding-bottom: 30px;
-    }
-    .grid {
-        display: grid;
-    }
-    .order {
-        order: -1;
-    }
-    .latest {
-        max-width: 317px;
-        margin: 0 auto;
-        margin-bottom: 55px;
-    }
-    .titlepage h2 {
-        line-height: 40px;
-        font-size: 28px;
-    }
-    .d_none {
-        display: none !important;
-    }
-    /* navbar css for mobile start */
-    .navbar-area {
-        margin-top: -67px;
-    }
-    .nav-toggler {
-        display: block;
-        position: absolute;
-        right: 15px;
-        z-index: 99999;
-    }
-    .site-navbar {
-        min-height: 60px;
-    }
-    .site-navbar ul {
-        position: absolute;
-        width: 100%;
-        left: 0px;
-        top: 0px;
-        flex-direction: column;
-        align-items: center;
-        background-color: #fff;
-        max-height: 0;
-        overflow: hidden;
-        transition: .3s;
-        z-index: 99999;
-        box-shadow: 0 0 10px rgb(192, 190, 182);
-    }
-    .site-navbar ul li {
-        width: 100%;
-        text-align: left;
-        padding-right: 0;
-    }
-    .site-navbar ul li a {
-        padding: 25px 25px 0px 25px;
-    }
-    .site-navbar ul.open {
-        max-height: 100vh;
-        padding-bottom: 25px;
-        overflow: visible;
-    }
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) { 
+    
+.user-menu, .header-right ul.list-inline {
+  text-align: center;
+}  
+.logo h1 {
+  font-size: 30px;
+  margin: 20px 0;
+  text-align: center;
+} 
+.shopping-item {
+  float: none;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  text-align: center;
+}  
+.navbar-header {
+  text-align: center;
+}    
+    
+.navbar-toggle {
+    border-color: #fff;
+    float: none;
+    margin: 10px auto;
+}
+.navbar-toggle .icon-bar { background: none repeat scroll 0 0 #333 }  
+.navbar-collapse.collapse.in {
+  background: none repeat scroll 0 0 #f4f4f4;
+  position: relative;
+  z-index: 99;
+} 
+.mainmenu-area ul.navbar-nav li a {
+  padding: 15px;
+}  
+.mainmenu-area {position: relative !important}
+.slide-text {
+  font-size: 16px;
+}  
+.slide-text h2 {
+  font-size: 30px;
+}  
+.readmore {
+  font-size: 16px;
+  padding: 8px 20px;
+}    
+.single-promo {
+  margin-bottom: 30px;
+} 
+.section-title {
+  font-size: 35px;
+}  
+    
+    
+.product-widget-area .zigzag-bottom {
+  bottom: -50px;
+  height: 100px;
+}
+.product-widget-area {
+  padding-bottom: 90px;
+}   
+    
+.footer-top-area .zigzag-bottom {
+  bottom: -153px;
+  height: 200px;
+}    
+.footer-top-area {
+  padding: 35px 0 125px;
+} 
+    
+.single-product-widget, .footer-about-us, .footer-menu {
+  margin-bottom: 60px;
+}  
+    
+.product-wid-title {
+  font-size: 25px;
+}  
+    
+.related-products-wrapper .owl-nav {
+  left: -15px;
+  position: relative;
+  right: inherit;
+  top: 15px;
+}  
+div.cart-collaterals ul.products {
+  margin: 0;
+}  
+div.cart-collaterals ul.products li.product {
+  margin-bottom: 30px;
+  margin-left: 0;
+  width: 100%;
+}  
+div.cart-collaterals ul.products li.product img {width: 100%}  
+    
+.product-bit-title h2 {
+  font-size: 35px;
+  padding: 40px 0;
+}  
+.col2-set {
+  margin-left: 0;
+}    
+.col-1, .col-2 {
+  float: none;
+  margin-left: 0;
+  width: inherit;
+}    
+    
+    
+/* Special */    
+    
+table.shop_table th, table.shop_table td {
+  font-size: 12px;
+  padding: 5px;
+}    
+td.product-thumbnail img {
+  width: 30px;
+} 
+    
+div.quantity input.plus, div.quantity input.minus {
+  display: none;
+}   
+table.shop_table th {
+  font-size: 12px;
+}    
+div.coupon input[type="text"] {
+  width: 100px;
+} 
+.coupon {margin-bottom: 10px}      
+.cross-sells {
+  float: none;
+  margin-bottom: 30px;
+  margin-right: 0;
+  width: 100%;
+}  
+.cart_totals, .cart-collaterals .shipping_calculator {
+  float: none;
+  margin-bottom: 40px;
+  width: 100%;
+}  
+    
+    
+}
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+    
+  
+    
 }
