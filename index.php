@@ -35,47 +35,60 @@
     session_start();
     include_once("connection.php"); 
   ?>
-      <!-- header section start -->
-      <div class="header_section">
-         <div class="container-fluid">
-            <nav class="navbar">
-               <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav ml-auto">
-                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Home</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="?page=product_management">Product</a>
-                     </li>
+      <header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarExample01"
+        aria-controls="navbarExample01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="index.php">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="?page=logout">Product</a>
+          </li>
 
-                     <?php 
+          <?php 
                         if(isset($_SESSION['us']) && $_SESSION['us'] !=""){
                                 ?>
-                      <li  class="nav-item"><a href="?page=logout"a class="nav-link" >Hi, <?php echo $_SESSION['us'] ?></a></li>
+                      <li  class="nav-item active"><a href="?page=logout" class="nav-link" aria-current="page" >
+                        Hi, <?php echo $_SESSION['us'] ?></a></li>
                       <?php 
                               }
                              else{
                              ?>
 
-                        <li><a href="?page=login">Sign In</a></li>
+                        <li class="nav-item active" ><a href="?page=login" class="nav-link" aria-current="page">Sign In</a></li>
 
                       <?php 
                                     }
                                 ?>
 
-                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-                     </li>
-                  </ul>
-               </div>
-            </nav>
-         </div>
+        </ul>
       </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
 
+  <!-- Jumbotron -->
+  <div class="p-5 text-center bg-light">
+    <h1 class="mb-3">Heading</h1>
+    <h4 class="mb-3">Subheading</h4>
+    <a class="btn btn-primary" href="" role="button">Call to action</a>
+  </div>
+  <!-- Jumbotron -->
+</header>
       
 
 
