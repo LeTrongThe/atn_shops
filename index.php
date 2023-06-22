@@ -35,9 +35,9 @@
     session_start();
     include_once("connection.php"); 
   ?>
-      <header>
+      <header style="color: black;">
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white" style="color: black;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white" >
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
