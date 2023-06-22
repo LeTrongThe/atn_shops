@@ -14,10 +14,10 @@
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="~/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="~/assets/css/templatemo-lugx-gaming.css">
+    <link rel="stylesheet" href="~/assets/css/owl.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 <!--
 
@@ -56,7 +56,7 @@ https://templatemo.com/tm-589-lugx-gaming
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="index.html" class="logo">
-                        <img src="assets/images/logo1.png" alt="" style="width: 158px; border-radius: 10px;">
+                        <img src="~/assets/images/logo1.png" alt="" style="width: 158px; border-radius: 10px;">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
@@ -111,7 +111,7 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
         <div class="col-lg-4 offset-lg-2">
           <div class="right-image">
-            <img src="assets/images/toy.png" alt="">
+            <img src="~/assets/images/toy.png" alt="">
 
           </div>
         </div>
@@ -190,10 +190,10 @@ https://templatemo.com/tm-589-lugx-gaming
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="~/assets/js/isotope.min.js"></script>
+  <script src="~/assets/js/owl-carousel.js"></script>
+  <script src="~/assets/js/counter.js"></script>
+  <script src="~/assets/js/custom.js"></script>
 
   </body>
 </html>
