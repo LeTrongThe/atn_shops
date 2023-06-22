@@ -37,7 +37,7 @@
   ?>
       <header>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white" class="footer_section layout_padding">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white"  style="background: black;">
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -47,7 +47,6 @@
           <li class="nav-item active">
             <a class="nav-link" aria-current="page" href="?page=logout">Product</a>
           </li>
-
           <?php 
                         if(isset($_SESSION['us']) && $_SESSION['us'] !=""){
                                 ?>
