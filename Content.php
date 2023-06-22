@@ -24,7 +24,7 @@ include_once("connection.php");
 			                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 				            ?>
                             
-        <div class="col-lg-3 col-md-6">
+       
           <div class="item">
             <div class="thumb">
               <a href="product-details.html"><img src="product-imgs/<?php echo $row['Pro_image']?>" width="306" height="306"></a>
@@ -36,7 +36,7 @@ include_once("connection.php");
               <a href="product-details.html"><i class="fa fa-shopping-bag"></i></a>
             </div>
           </div>
-        </div>
+        
 
         <?php
                 
