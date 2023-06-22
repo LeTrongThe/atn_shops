@@ -42,8 +42,6 @@ include_once("connection.php");
                 
             }
             ?>
- 
-
 
       </div>
     </div>
