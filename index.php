@@ -46,16 +46,16 @@
                <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
                      <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">Product</a>
+                        <a class="nav-link" href="?page=product_management">Product</a>
                      </li>
 
                      <?php 
                         if(isset($_SESSION['us']) && $_SESSION['us'] !=""){
                                 ?>
-                      <li><a href="?page=logout">Hi, <?php echo $_SESSION['us'] ?></a></li>
+                      <li  class="nav-item"><a href="?page=logout"a class="nav-link" >Hi, <?php echo $_SESSION['us'] ?></a></li>
                       <?php 
                               }
                              else{
