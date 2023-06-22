@@ -1,56 +1,38 @@
-<div class="container">
-        <div class="row d-flex justify-content-center align-items-center p-3">
+<?php
+include_once("connection.php");
 
-        <div class="col-md-8">
+if (isset($_POST['Search_button'])) {
+    $keyword = $_POST['Search_product'];
+    $db = "SELECT * FROM product WHERE Product_Name LIKE '%$keyword%'
+        ORDER BY Product_ID DESC";
+    $re = mysqli_query($conn, $db);
+}
+?>
+<div class="container mt-3">
+    <h2>Search: <?=$keyword?></h2>
+    <div class="row">
+        <?php
+        while ($row = mysqli_fetch_array($re)) {
+        ?>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="product-imgs/<?= $row['Pro_image'] ?>" class="card-img-top" alt="<?= $row['Product_Name'] ?>" 
+                    style="margin: auto; width: max-content;" height="250px" />
+                    <div class="card-body">
+                        <a href="detail.php?id=<?= $row['Product_ID'] ?>" class="text-decoration-none">
+                            <h5 class="card-title"><?= $row['Product_Name'] ?></h5>
+                        </a>
+                        <h6 class="card-subtitle mb-2 text-muted"><span>&#36;</span><?= $row['Price'] ?></h6>
 
-        <div class="search">
-       
+                    </div>
+                </div>
+            </div>
+        <?php
+        }
+        ?>
     </div>
 </div>
-</div>
-        <h2>Result</h2>
-        <div class="row">
-            <?php
-                include_once("connection.php");
-                
-                $nameP = $_POST['txtSearch'];
-         
-                $sql = "SELECT * FROM product WHERE Product_Name LIKE ?";
-                $stmt = $conn->prepare($sql); 
-                $n = "%$nameP%";
-                $stmt->bind_param("s", $n);
-                $stmt->execute();
-                $result = $stmt->get_result();
-                while ($r = $result->fetch_assoc()) {
-                   
-            ?>
-             
-             
-             <div class="col-md-4 pb-2" id="itemss" >
-                    <div class="card">
-                        <img style="height:300px; margin-top: 50px;"             
-                        src="product-imgs/<?php echo $r['Pro_image']?>"
-                        class="card-img-top"
-                        alt="Product" style="margin: auto;
-                        width: 300px;"
-                        />
-                        
-                        <div class="card-body" style=" margin-bottom: 10px">
-                        <a href="?page=detail&&id=<?php echo $r["Product_ID"];?>" class="text-decoration-none">
-                        
-                        <h5 class="card-title"> <?php echo $r['Product_Name'];?></h5></a>
 
-                        <h6 class="card-subtitle mb-2 text-muted"><span></span> <?php echo $r['Price'];?>$</h6>
-
-                        <a href="?page=cart&&id= <?php echo $r["Product_ID"];?>" class="btn btn-primary">Add to Cart</a>
-                        </div>
-                        
-                        </div>
-                    </div>
-        <?php
-            //  echo '<meta http-equiv="refresh" content="0;URL=index.php?page=Search.php"/>'; 
-        }    
-        ?>
-        </div>
-        </div>
-
+</body>
+<script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="../assets/js/bootstrap.bundle.min.js"></script>

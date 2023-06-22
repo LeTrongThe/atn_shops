@@ -1,60 +1,48 @@
 <?php
 //Get custmer information
 $query = "SELECT CustName, Address, email, telephone
-	FROM customer
-	WHERE Username = '" . $_SESSION["us"] . "'";
-$result  = mysqli_query($conn, $query) or die(mysqli_error($conn));
-$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+			FROM customer
+			WHERE Username = '" . $_SESSION["us"] . "'";
+	$result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-$us  = $_SESSION["us"];
-$email = $row["email"];
-$fullname = $row["CustName"];
-$address = $row["Address"];
-$telephone = $row["telephone"];
+	$us = $_SESSION["us"];
+	$email = $row["email"];
+	$fullname = $row["CustName"];
+	$address = $row["Address"];
+	$telephone = $row["telephone"];
 
 //Update information when the user presses the "Update" button
 if(isset($_POST['btnUpdate'])){
-
-	$fullname=$_POST['txtFullname']; 
+	$fullname=$_POST['txtFullname'];
 	$address = $_POST['txtAddress'];
-  $tel = $_POST['txtTel'];
-	
-	$test = check();
-	
-	if($test==""){
-	
-	
-	//Customer changes password 
+	$tel = $_POST['txtTel'];
 
-	
-	if($_POST['txtPass1']!=""){
+	$test = check();
+	if($test==""){
+		if($_POST['txtPass1']!=""){
+			$pass = md5($_POST['txtPass1']);
+
+			$sq = "UPDATE customer
+			SET CustName='$fullname', Address='$address',
+			telephone='$telephone', Password='$pass'
+			WHERE Username = '". $_SESSION['us'] . "'";
+
+			mysqli_query($conn,$sq) or die(mysqli_error($conn));
+		}
+
+		else {
+				$sq = "UPDATE customer
+				SET CustName='$fullname', Address='$address',
+				telephone='$telephone' WHERE Username = '". $_SESSION['us']. "'";
+				mysqli_query($conn, $sq) or die(mysqli_error($conn));
+			}
+			echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
+		}else{
 		
-	 $pass = md5($_POST['txtPass1']);
-	
-	$sq= "UPDATE customer SET CustName='$fullname', Address='$address', 
-	telephone='$telephone', Password='$pass'
-	 WHERE Username = '".$_SESSION[ 'us'] . "'";
-	
-	mysqli_query($conn, $sq) or die(mysqli_error($conn));
-	
-	} 
-	
-	//Customer does not change password
-	
-	else{
-	
-	$sq= "UPDATE customer 
-	SET CustName='$fullname',
-	 Address='$address', telephone='$telephone' WHERE Username = '". $_SESSION[ 'us'] . "'"; mysqli_query($conn, $sq) or die(mysqli_error($conn));
-	
-	}
-	
-	echo '<meta http-equiv="refresh" content="0;URL=index.php" />';
-	
-	}else{
-	echo $test;
-	}
-}
+				echo $test;
+			}
+		}
 
 //Write check() function to check information
 function check(){
@@ -69,11 +57,12 @@ function check(){
 		return "<li>Password and Confirm Pass do not match</li>";
 	}
 	else{
-		return "";
+			return"";
+		}
 	}
-}
-?>
 
+
+?>
 <div class="container">
 	
 <h2>Update Profile</h2>
@@ -83,7 +72,7 @@ function check(){
 						    
                             <label for="lblTenDangNhap" class="col-sm-2 control-label">Username(*):  </label>
 							<div class="col-sm-10">
-							      <label class="form-control" style="font-weight:400"><?php echo $us ?></label>
+							      <label class="form-control" style="font-weight:400"><?php echo $us; ?></label>
 							</div>
                      </div>
                            
@@ -111,7 +100,7 @@ function check(){
                             <div class="form-group">                         
                             	<label for="lblHoten" class="col-sm-2 control-label">Full name(*):  </label>
 								<div class="col-sm-10">
-							      <input type="text" name="txtFullname" id="txtFullname" value="<?php echo $fullname ?>" 
+							      <input type="text" name="txtFullname" id="txtFullname" value="<?php echo $fullname; ?>" 
 								  class="form-control" placeholder="Enter Fullname, please"/>
 								</div>
                             </div>
@@ -119,7 +108,7 @@ function check(){
                              <div class="form-group"> 
                              <label for="lblDiaChi" class="col-sm-2 control-label">Address(*):  </label>
 							<div class="col-sm-10">
-							      <input type="text" name="txtAddress" id="txtAddress" value="<?php echo $address;  ?>" class="form-control" placeholder="Enter Address, please"/>
+							      <input type="text" name="txtAddress" id="txtAddress" value="<?php echo $address; ?>" class="form-control" placeholder="Enter Address, please"/>
 							</div>
                             </div>
                             
@@ -137,6 +126,7 @@ function check(){
 					</div>
 				</form>
 </div>
+
 
 
 
