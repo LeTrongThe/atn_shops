@@ -30,7 +30,6 @@ include_once("connection.php");
                      <figure><img src="product-imgs/<?php echo $row['Pro_image']?>" width="306" height="306"/></figure>
                      <h3><?php echo  $row['Price']?>$</h3>
                      <span> <?php echo  $row['Product_Name']?>  </span>
-                     <a class="read_more mar_top" href="Javascript:void(0)"> Buy Now</a>
                   </div>
                </div>
                <?php } ?>
