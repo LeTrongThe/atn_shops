@@ -45,8 +45,9 @@
             <a class="nav-link" aria-current="page" href="index.php">Home</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="?page=logout">Product</a>
+            <a class="nav-link" aria-current="page" href="?page=product_management">Product</a>
           </li>
+
           <?php 
                         if(isset($_SESSION['us']) && $_SESSION['us'] !=""){
                                 ?>
