@@ -63,6 +63,10 @@
                       <?php 
                                     }
                                 ?>
+                      <form class="d-flex" action="?page=search" method="POST">
+                                <input  type="text" placeholder="Search"  name="Search_product" required>
+                                <button class="btn btn-outline-secondary" name="Search_button" type="submit">Search</button>
+                            </form>
         </ul>
       </div>
     </div>
