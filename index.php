@@ -35,7 +35,7 @@
     session_start();
     include_once("connection.php"); 
   ?>
-      <header style="color: black;">
+      <header bgcolor="#000099">
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white" >
     <div class="container-fluid">
