@@ -36,7 +36,7 @@ https://templatemo.com/tm-589-lugx-gaming
   ?>
 
   <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
+  <div id="" class="">
     <div class="preloader-inner">
       <span class="dot"></span>
       <div class="dots">
