@@ -10,12 +10,6 @@ include_once("connection.php");
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <div class="section-heading">
-            <h6>Trending</h6>
-            <h2>Trending Toy</h2>
-          </div>
-        </div>
-        <div class="col-lg-6">
         </div>
 
         <?php
