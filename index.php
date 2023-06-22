@@ -35,8 +35,8 @@
     session_start();
     include_once("connection.php"); 
   ?>
-      <!--header section start -->
-      <!-- <div class="header_section">
+      <!-- header section start -->
+      <div class="header_section">
          <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
@@ -74,7 +74,7 @@
                </div>
             </nav>
          </div>
-      </div> -->
+      </div>
 
 
       <?php
